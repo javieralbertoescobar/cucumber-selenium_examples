@@ -7,9 +7,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"C:/Users/Javier/IdeaProjects/cucumber/src/test/resources/features"}//,
+        features = {"./src/test/resources/features"},
         //glue = "C:/Users/Javier/IdeaProjects/cucumber/src/test/java/steps",
-        //plugin = "html:target/selenium-reports"
+        plugin = {"pretty","html:target/cucumber-reports"},
+        monochrome = true,
+        tags = {"@SmokeTest"}
 )
 
 public class MultipleFeatureTest {
