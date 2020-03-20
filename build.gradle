@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     /***** Cucuber *****/
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0'
+    //testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0'
     compile group: 'io.cucumber', name: 'cucumber-java', version: '5.5.0'
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '5.5.0'
     compile group: 'io.cucumber', name: 'cucumber-core', version: '5.5.0'
@@ -21,6 +21,13 @@ dependencies {
     /******* selenium *********/
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
     testCompile('io.github.bonigarcia:selenium-jupiter:3.3.0')
+
+    /******* MockServer ******/
+    testImplementation("org.mock-server:mockserver-netty:5.9.0")
+
+    /******* JUnit   ********/
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
 
 
 }

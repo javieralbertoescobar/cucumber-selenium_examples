@@ -8,10 +8,14 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"./src/test/resources/features"},
-        //glue = "C:/Users/Javier/IdeaProjects/cucumber/src/test/java/steps",
-        plugin = {"pretty","html:target/cucumber-reports"},
+        glue = {""},
+        plugin = {"html:target/cucumber-reports",
+                "json:target/json-report.json",
+                "pretty:target/pretty-repot.txt",
+                "junit:target/junit-report.xml"},
         monochrome = true,
-        tags = {"@SmokeTest"}
+        tags = {"@SmokeTest"},
+        strict = true
 )
 
 public class MultipleFeatureTest {
